@@ -5,71 +5,106 @@
         <meta name="author" content="Marcel Akerboom">
         <meta name="version" content="0.1">
         <title>Ontwerp 4.3</title>
+        <link rel="stylesheet" href="index.css">
     </head>
     <body>
-        <nav>
-            <a href="./index.html">Home</a>
-        </nav>
+        <header>
+            <nav>
+                <a href="./index.html">Home</a>
+            </nav>
+        </header>
 
         <main>
             <h1>Ontwerp 4.3</h1>
-            <article id="assignment">
+
+            <article id="opdracht">
                 <h2>De Opdracht</h2>
                 <p>
                     Vandaag gaan jullie samen werken in een GIT-repository, deze.
                 </p>
-                <section>
-                    <h3>Voorbereiding</h3>
-                    <ol>
-                        <li>Fork deze repository naar <strong>één</strong> van jullie eigen github.com accounts.</li>
-                        <li>Geef jouw teamgenoten toegang tot de repository</li>
-                        <li>Clone de repository naar jouw machine</li>
-                    </ol>
-                </section>
 
-                <section>
-                    <h3>Eigen pagina</h3>
-                    <ol>
-                        <li>Maak een nieuwe feature branch aan genaamd: <strong>feature/{studentnummer}.html</strong></li>
-                        <li>Maak een nieuw html bestand aan genaamd: <strong>{studentnummer}.html</strong></li>
-                        <li>Commit dit bestand</li>
-                        <li>Voeg een navigatie link toe naar <strong>./{studentnummer}.html</strong> in de <strong>index.html</strong></li>
-                        <li>Commit deze aanpassing</li>
-                        <li>Merge de aanpassingen in deze branch naar <strong>develop</strong></li>
-                        <li>Pull eventueel de aanpassingen van jouw teamgenoten in de develop branch van github</li>
-                        <li>Push de develop branch naar github</li>
-                    </ol>
-                </section>
+                <nav>
+                    <a href="#voorbereiding">Voorbereiding</a>
+                    <a href="#eigen-pagina">Eigen pagina</a>
+                    <a href="#merge-conflict">Merge conflict</a>
+                    <a href="#release">Release</a>
+                    <a href="#hotfix">Hotfix</a>
+                </nav>
 
-                <section>
-                    <h3>Merge conflict</h3>
-                    <ol>
-                        <li>Pull de laatste versie van de <strong>develop</strong> branch van github</li>
-                        <li>Maak een nieuwe feature branch aan genaamd: <strong>feature/conflict</strong></li>
-                        <li>Maak een nieuw html bestand aan genaamd: <strong>conflict.html</strong></li>
-                        <li>Zet jouw eigen naam in de <strong>title</strong>van dit bestand</li>
-                        <li>Commit dit bestand</li>
-                        <li>Voeg een navigatie link toe naar <strong>./conflict.html</strong> in de <strong>index.html</strong></li>
-                        <li>Commit deze aanpassing</li>
-                        <li>Merge de aanpassingen in deze branch naar <strong>develop</strong></li>
-                        <li>Pull eventueel de aanpassingen van jouw teamgenoten in de develop branch van github</li>
-                        <li>Los het merge conflict op door beide namen samen in de title te krijgen</li>
-                        <li>Push de develop branch naar github</li>
-                    </ol>
-                </section>
+                <img src="./gitflow.bmp" class="right">
+                <div class="sections">
 
-                <section>
-                    <h3>Release</h3>
-                    <ol>
-                        <li>Pull de laatste versie van de <strong>master</strong> en <strong>develop</strong> branch van github</li>
-                        <li>Maak een nieuwe release branch aan: <strong>release/{studentnummer}</strong></li>
-                        <li>Pas de version meta-tag aan naar <code>0.1-{studentnummer}</code> in <strong>index.html</strong></li>
-                        <li>Commit deze aanpassing</li>
-                        <li>Merge de aanpassingen in deze branch naar <strong>develop</strong></li>
-                        <li>Merge de aanpassingen in deze branch naar <strong>master</strong></li>
-                        <li>Push de <strong>develop</strong> en <strong>master</strong> branch naar github</li>
-                    </ol>
-                </section>
+                    <section id="voorbereiding">
+                        <h3>1. Voorbereiding</h3>
+                        <ol>
+                            <li>Fork deze repository naar <strong>één</strong> van jullie eigen github.com accounts.
+                            </li>
+                            <li>Geef jouw teamgenoten toegang tot de repository</li>
+                            <li>Clone de repository naar jouw machine</li>
+                        </ol>
+                    </section>
+
+                    <section id="eigen-pagina">
+                        <h3>2. Eigen pagina</h3>
+                        <ol>
+                            <li>Maak een nieuwe feature branch aan genaamd:
+                                <strong>feature/{studentnummer}.html</strong>
+                            </li>
+                            <li>Maak een nieuw html bestand aan genaamd: <strong>{studentnummer}.html</strong></li>
+                            <li>Commit dit bestand</li>
+                            <li>Voeg een navigatie link toe naar <strong>./{studentnummer}.html</strong> in de <strong>index.html</strong>
+                            </li>
+                            <li>Commit deze aanpassing</li>
+                            <li>Merge de aanpassingen in deze branch naar <strong>develop</strong></li>
+                            <li>Pull eventueel de aanpassingen van jouw teamgenoten in de develop branch van github</li>
+                            <li>Push de develop branch naar github</li>
+                        </ol>
+                    </section>
+
+                    <section id="merge-conflict">
+                        <h3>3. Merge conflict</h3>
+                        <ol>
+                            <li>Pull de laatste versie van de <strong>develop</strong> branch van github</li>
+                            <li>Maak een nieuwe feature branch aan genaamd: <strong>feature/conflict1</strong></li>
+                            <li>Maak een nieuw html bestand aan genaamd: <strong>conflict.html</strong></li>
+                            <li>Zet <em>Conflict1</em> in de <strong>title</strong> van dit bestand</li>
+                            <li>Commit dit bestand</li>
+                            <li>Maak een nieuwe feature branch aan genaamd: <strong>feature/conflict2</strong></li>
+                            <li>Maak een nieuw html bestand aan genaamd: <strong>conflict.html</strong></li>
+                            <li>Zet <em>Conflict2</em> in de <strong>title</strong> van dit bestand</li>
+                            <li>Commit dit bestand</li>
+                            <li>Merge de branch <strong>feature/conflict1</strong> naar <strong>develop</strong></li>
+                            <li>Merge de branch <strong>feature/conflict2</strong> naar <strong>develop</strong></li>
+                            <li>Los het merge conflict op door 1 van de titels te kiezen</li>
+                            <li>Commit de merge</li>
+                            <li>Push de develop branch naar github</li>
+                        </ol>
+                    </section>
+
+                    <section id="release">
+                        <h3>4. Release</h3>
+                        <ol>
+                            <li>Pull de laatste versie van de <strong>master</strong> en <strong>develop</strong> branch
+                                van
+                                github
+                            </li>
+                            <li>Maak een nieuwe release branch aan: <strong>release/{studentnummer}</strong></li>
+                            <li>Pas de version meta-tag aan naar <code>0.1-{studentnummer}</code> in
+                                <strong>index.html</strong></li>
+                            <li>Commit deze aanpassing</li>
+                            <li>Merge de aanpassingen in deze branch naar <strong>develop</strong></li>
+                            <li>Merge de aanpassingen in deze branch naar <strong>master</strong></li>
+                            <li>Push de <strong>develop</strong> en <strong>master</strong> branch naar github</li>
+                        </ol>
+                    </section>
+
+                    <section id="hotfix">
+                        <h3>5. Hotfix</h3>
+                        <p>We zijn vergeten naar elkaars pagina's te linken in de navigatie. Voeg de links naar de
+                            pagina's
+                            van jouw teamgenoten toe aan jouw eigen pagina via een hotfix branch.</p>
+                    </section>
+                </div>
             </article>
         </main>
     </body>
