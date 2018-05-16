@@ -1,0 +1,39 @@
+body {
+    margin: 0;
+}
+
+main {
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 80vw;
+}
+
+header nav {
+    background: #ddd;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+header nav a {
+    display: inline-block;
+    padding: 0.2em 0.4em;
+}
+
+.right {
+    float: right;
+}
+
+main nav a {}
+
+main img.right {
+    width: 50%;
+    border: 1px solid;
+    margin: 0.5em;
+}
