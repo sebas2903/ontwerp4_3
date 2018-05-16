@@ -12,19 +12,27 @@ header nav {
     background: #ddd;
 }
 
-header nav a {
+a {
     text-decoration: none;
     color: inherit;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+header nav a {
     display: inline-block;
     padding: 0.2em 0.4em;
 }
 
-header nav a:hover {
-    text-decoration: underline;
+.right {
+    float: right;
 }
 
+main nav a {}
+
 main img.right {
-    float: right;
     width: 50%;
     border: 1px solid;
     margin: 0.5em;
